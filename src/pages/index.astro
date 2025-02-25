@@ -1,15 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Layout/Footer';
-import NavBar from '../components/Layout/NavBar';
 import Presentation from '../components/Main/Presentation';
+import ScrollReader from '../components/Main/ScrollReader';
 ---
-
 <Layout>
-    <NavBar isHome={true} />
-        <div class="min-h-screen">
-            <Presentation/>
-        </div>
-        <hr class="w-full border-[#484848]"/>
-	<Footer/>
+    <ScrollReader client:load />
+    <div class="min-h-screen">
+        <Presentation/>
+    </div>
+    <hr id="page-divider" class="w-full border-[#484848]"/>
+    <div class="min-h-screen">
+        <h2 class="text-2xl font-bold text-center">Sección 1</h2>
+    </div>
+    <div class="min-h-screen">
+        <h2 class="text-2xl font-bold text-center">Sección 2</h2>
+    </div>
+    <Footer/>
 </Layout>

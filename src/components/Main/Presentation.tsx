@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
@@ -31,8 +31,10 @@ const Presentation = () => {
                     </div>
                 </div>
             </div>
-            <div className='h-screen w-[50%] items-center justify-center flex flex-col'>
-                
+            <div className='h-screen w-[50%] items-start justify-end flex flex-col'>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <img className="w-full max-w-md sm:max-w-lg md:max-w-lg lg:max-w-lg xl:max-w-[70%]" src="/MyImages/Main_Image.png" alt="Description" />
+                </Suspense>
             </div>
         </div>
     </div>
