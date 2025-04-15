@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import Logo from '../../../public/logo.svg?react';
+
 
 interface NavBarProps {
   isHome: boolean
@@ -73,7 +75,7 @@ const NavBar: React.FC<NavBarProps> = ({ isHome }) => {
         <div>
           <nav className={`absolute top-0 left-0 w-full z-50 p-5 pl-10 pr-10 flex justify-between items-center
             transition-all duration-500 ease-in-out transform `}>
-            <a className={`navbar-brand font-extrabold text-2xl min-w-48 ${isHome ? 'text-black' : 'text-white'}`} href='#'>JESÚS ZÁRATE</a>
+              <Logo className={`w-6 h-6 ${isHome ? 'text-black' : 'text-white'}`}/>
             {routes}
             {hamburgerButton}
           </nav>
@@ -83,7 +85,7 @@ const NavBar: React.FC<NavBarProps> = ({ isHome }) => {
       {!isHome && 
         <nav className={`fixed top-0 left-0 w-full z-50 p-5 pl-10 pr-10 flex justify-between items-center
           transition-all duration-500 ease-in-out transform ${!isVisible ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
-          <a className={`navbar-brand font-extrabold text-2xl min-w-48 ${isHome ? 'text-black' : 'text-white'}`} href='#'>JESÚS ZÁRATE</a>
+            <Logo className={`w-6 h-6 ${isHome ? 'text-black' : 'text-white'}`}/>
           {routes}
           {hamburgerButton}
         </nav>
